@@ -1,21 +1,384 @@
 <!doctype html>
 <html lang="pl">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="author" content="Rafał Izdebski" />
-        <link rel="stylesheet" href="/src/style.css" />
-        <title>CarsSpot | Sprzedajemy samochody z Europy</title>
-        <meta
-            name="description"
-            content="Jesteśmy CarsSpot, zajmujemy się sprzedażą samochodów z Europy. Sprawdź naszą ofertę."
-        />
-    </head>
-    <body>
-        <div>
-            <h1 class="text-4xl text-red-500">Test</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rafał Izdebski" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>CarsSpot | Sprzedajemy samochody z Europy</title>
+    <meta
+      name="description"
+      content="Jesteśmy CarsSpot, zajmujemy się sprzedażą samochodów z Europy. Sprawdź naszą ofertę."
+    />
+  </head>
+  <body class="overflow-x-hidden">
+    <div>
+      <header class="relative w-dvw h-20">
+        <div class="container flex items-center justify-between w-full h-full">
+          <a class="text-black" href="/"
+            ><span class="text-accent">Cars</span>Sport</a
+          >
+
+          <!--- MOBILE HAMBURGER --->
+          <button
+            id="hamburger"
+            class="flex lg:hidden flex-col gap-1 w-10 h-8 items-center justify-evenly"
+            aria-label="Otwórz menu nawigacyjne"
+          >
+            <span class="w-full h-1 bg-accent rounded-lg"></span>
+            <span class="w-full h-1 bg-accent rounded-lg"></span>
+            <span class="w-full h-1 bg-accent rounded-lg"></span>
+          </button>
+
+          <!--- MOBILE MENU --->
+          <div
+            id="mobileMenu"
+            class="absolute -bottom-[calc(100dvh-80px)] -right-[calc(100%+4rem)] flex items-end justify-end w-dvw h-dvh bg-black bg-opacity-10 backdrop-blur-xl transition-all duration-300"
+          >
+            <div
+              class="relative flex flex-col items-end justify-between bg-white opacity-100 w-10/12 max-w-3xl h-full p-6"
+            >
+              <div class="flex items-center justify-between w-full">
+                <a class="text-black" href="/"
+                  ><span class="text-accent">Cars</span>Sport</a
+                >
+                <button
+                  id="closeMenuBtn"
+                  class="flex flex-col gap-1 w-10 h-8 items-center justify-evenly"
+                  aria-label="Zamknij menu nawigacyjne"
+                >
+                  <span
+                    class="w-full h-1 bg-accent rounded-lg rotate-45 origin-center translate-y-2"
+                  ></span>
+                  <span
+                    class="w-full h-1 bg-accent rounded-lg -rotate-45 origin-center -translate-y-[7px]"
+                  ></span>
+                </button>
+              </div>
+
+              <div class="flex items-start justify-end w-full h-2/3">
+                <nav class="">
+                  <ul class="flex flex-col gap-4">
+                    <li class="flex items-center">
+                      <a
+                        class="font-robotoFlex font-normal text-primary text-2xl"
+                        href="#galeria"
+                        >Galeria zdjęć</a
+                      >
+                    </li>
+                    <hr />
+                    <li class="flex items-center justify-center">
+                      <a
+                        class="font-robotoFlex font-normal text-primary text-2xl"
+                        href="#faq"
+                        >FaQ</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <a
+                class="rounded-lg px-6 py-3 mb-0 bg-accent hover:bg-accent/90 text-white font-robotoFlex font-semibold transition-colors"
+                href="callto:000000000"
+                >Zadzwoń do nas</a
+              >
+            </div>
+          </div>
+
+          <!--- DESKTOP MENU --->
+          <nav class="hidden lg:block">
+            <ul class="flex gap-6">
+              <li>
+                <a
+                  class="relative font-robotoFlex font-normal text-primary after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[0.1rem] after:bg-accent after:hover:w-full after:transition-all after:duration-300"
+                  href="#galeria"
+                  >Galeria zdjęć</a
+                >
+              </li>
+              <li>
+                <a
+                  class="relative font-robotoFlex font-normal text-primary after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[0.1rem] after:bg-accent after:hover:w-full after:transition-all after:duration-300"
+                  href="#faq"
+                  >FaQ</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <a
+            class="hidden lg:inline rounded-lg px-6 py-3 bg-accent hover:bg-accent/90 text-white font-robotoFlex font-semibold transition-colors"
+            href="callto:000000000"
+            >Zadzwoń do nas</a
+          >
         </div>
-        <script type="module" src="/src/main.js"></script>
-    </body>
+      </header>
+      <main>
+        <section id="hero" class="py-24">
+          <div class="container flex flex-col gap-12">
+            <h1
+              class="text-[4.768125rem] font-bebasNeue text-black uppercase lg:w-[55%] -tracking-wide leading-[83.92px]"
+              data-aos="fade-right"
+            >
+              sprzedajemy samochody z europy
+            </h1>
+            <p
+              class="font-robotoCondensed lg:w-[24%]"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              Kup komfortowy pojaz, aby każda podróż była wyjątkowym przeżyciem.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6">
+              <a
+                class="rounded-lg px-6 py-3 w-full sm:w-fit bg-accent hover:bg-accent/90 text-secondary font-robotoFlex font-semibold transition-colors"
+                href=""
+                data-aos="fade-right"
+                data-aos-delay="300"
+                >Zobacz zdjęcia</a
+              >
+              <a
+                class="rounded-lg px-6 py-3 w-full sm:w-fit bg-transparent hover:bg-accent/90 border border-accent text-accent hover:text-secondary font-robotoFlex font-semibold transition-colors"
+                href=""
+                data-aos="fade-left"
+                data-aos-delay="300"
+                >Zobacz zdjęcia</a
+              >
+            </div>
+          </div>
+        </section>
+        <section id="galeria" class="py-24">
+          <div class="container">
+            <div class="flex flex-col gap-6 lg:w-2/5">
+              <div>
+                <h3 class="text-accent text-[1.34375rem] font-robotoCondensed">
+                  Prezentacja firmy
+                </h3>
+                <h2 class="text-dark font-bebasNeue text-[2.5rem] uppercase">
+                  Zobacz naszą galerię zdjęć
+                </h2>
+              </div>
+              <div class="space-x-12">
+                <a class="font-robotoFlex font-semibold text-accent" href="/"
+                  >Samochody osobowe</a
+                >
+                <a class="font-robotoFlex font-normal text-black" href="/"
+                  >Samochody osobowe</a
+                >
+              </div>
+            </div>
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1434907652076-85f8401482c3?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    loading="lazy"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1434907652076-85f8401482c3?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    loading="lazy"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1434907652076-85f8401482c3?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    loading="lazy"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1434907652076-85f8401482c3?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    loading="lazy"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1434907652076-85f8401482c3?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    loading="lazy"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1434907652076-85f8401482c3?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    loading="lazy"
+                    alt=""
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1434907652076-85f8401482c3?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    loading="lazy"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+        <section class="bg-primary w-dvw h-full">
+          <div
+            class="container grid grid-cols-1 lg:grid-cols-2 lg:gap-12 content-between py-[88px]"
+          >
+            <article class="space-y-4">
+              <h5 class="font-bebasNeue text-2xl text-white">
+                ID NOSTRUD ENIM ESSE CONSECTETUR IN EU MOLLIT FUGIAT AUTE. VELIT
+                NULLA COMMODO.
+              </h5>
+              <div class="space-y-6">
+                <p
+                  id="textContent"
+                  class="font-robotoCondensed text-sm text-white h-1/2"
+                >
+                  Mauris varius ipsum mauris, rutrum lobortis magna efficitur a,
+                  Donec egestas, nisl vegicula feugiat ornare, diam turpis
+                  efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et
+                  Mauris varius ipsum mauris, rutrum lobortis magna efficitur a,
+                  Donec egestas, nisl vegicula feugiat ornare, diam turpis
+                  efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et
+                  Mauris varius ipsum mauris, rutrum lobortis magna efficitur a,
+                  Donec egestas, nisl vegicula feugiat ornare, diam turpis
+                  efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et
+                  Mauris varius ipsum mauris, rutrum lobortis magna efficitur a,
+                  Donec egestas, nisl vegicula feugiat ornare, diam turpis
+                  efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et
+                </p>
+                <button
+                  id="toggleButton"
+                  class="flex items-center gap-[6px] text-white border-b-[1.5px] pb-2 font-robotoCondensed border-white"
+                >
+                  <span>Rozwiń</span>
+                  <svg
+                    id="arrowIcon"
+                    class="transition-transform duration-300"
+                    width="13"
+                    height="15"
+                    viewBox="0 0 13 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.61485 11.8217L1.06071 7.38383L0 8.41747L6.365 14.62L6.89535 14.1032L12.73 8.41747L11.6693 7.38383L7.11515 11.8217V0H5.61485V11.8217Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </article>
+            <article class="space-y-4">
+              <h5 class="font-bebasNeue text-2xl text-white">
+                ID NOSTRUD ENIM ESSE CONSECTETUR IN EU MOLLIT FUGIAT AUTE. VELIT
+                NULLA COMMODO.
+              </h5>
+              <div class="space-y-6">
+                <p
+                  id="textContent"
+                  class="font-robotoCondensed text-sm text-white h-1/2"
+                >
+                  Mauris varius ipsum mauris, rutrum lobortis magna efficitur a,
+                  Donec egestas, nisl vegicula feugiat ornare, diam turpis
+                  efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et
+                  Mauris varius ipsum mauris, rutrum lobortis magna efficitur a,
+                  Donec egestas, nisl vegicula feugiat ornare, diam turpis
+                  efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et
+                  Mauris varius ipsum mauris, rutrum lobortis magna efficitur a,
+                  Donec egestas, nisl vegicula feugiat ornare, diam turpis
+                  efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et
+                  Mauris varius ipsum mauris, rutrum lobortis magna efficitur a,
+                  Donec egestas, nisl vegicula feugiat ornare, diam turpis
+                  efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et
+                </p>
+                <button
+                  id="toggleButton"
+                  class="flex items-center gap-[6px] text-white border-b-[1.5px] pb-2 font-robotoCondensed border-white"
+                >
+                  <span>Rozwiń</span>
+                  <svg
+                    id="arrowIcon"
+                    class="transition-transform duration-300"
+                    width="13"
+                    height="15"
+                    viewBox="0 0 13 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.61485 11.8217L1.06071 7.38383L0 8.41747L6.365 14.62L6.89535 14.1032L12.73 8.41747L11.6693 7.38383L7.11515 11.8217V0H5.61485V11.8217Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer class="bg-primary w-dvw h-20 border-t-[1px] border-white">
+        <div class="container flex items-center justify-between h-full">
+          <span class="font-robotoCondensed text-white font-bold"
+            >Cars Spot</span
+          >
+          <a
+            class="font-robotoCondensed text-white underline underline-offset-1"
+            href="/"
+            >Polityka prywatności</a
+          >
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init()
+    </script>
+
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        slidesPerView: 2,
+        loop: true,
+        centeredSlides: false,
+        spaceBetween: 48,
+        grabCursor: true,
+        slidesPerGroup: 1,
+        loopFillGroupWithBlank: false,
+        loopAdditionalSlides: 2,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          type: 'bullets',
+        },
+        lazy: {
+          loadPrevNext: true,
+          loadPrevNextAmount: 2,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next-unique',
+          prevEl: '.swiper-button-prev-unique',
+        },
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false,
+        },
+      })
+    </script>
+  </body>
 </html>
