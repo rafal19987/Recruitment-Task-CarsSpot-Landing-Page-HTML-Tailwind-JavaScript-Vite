@@ -4,23 +4,19 @@ const TABS = [
     label: 'Samochody osobowe',
     isActive: true,
     photos: [
-      '/src/assets/car-1.webp',
-      '/src/assets/car-2.webp',
-      '/src/assets/car-3.webp',
-      '/src/assets/car-4.webp',
-      '/src/assets/car-5.webp',
-      '/src/assets/car-6.webp',
+      '/car-1.webp',
+      '/car-2.webp',
+      '/car-3.webp',
+      '/car-4.webp',
+      '/car-5.webp',
+      '/car-6.webp',
     ],
   },
   {
     id: 2,
     label: 'Samochody dostawcze',
     isActive: false,
-    photos: [
-      '/src/assets/car-7.webp',
-      '/src/assets/car-8.webp',
-      '/src/assets/car-9.webp',
-    ],
+    photos: ['/car-7.webp', '/car-8.webp', '/car-9.webp'],
   },
 ]
 
