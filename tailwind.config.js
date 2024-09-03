@@ -31,6 +31,7 @@ export default {
           '"Roboto Condensed"',
           ...defaultTheme.fontFamily.sans,
         ],
+        magra: ['"Magra"', ...defaultTheme.fontFamily.sans],
       },
     },
   },
