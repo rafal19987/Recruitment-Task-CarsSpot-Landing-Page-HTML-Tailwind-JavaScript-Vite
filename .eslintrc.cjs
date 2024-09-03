@@ -14,6 +14,10 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  rules: {},
+  rules: {
+    rules: {
+      'prettier/prettier': ['error', { endOfLine: 'lf' }],
+    },
+  },
   plugins: ['prettier'],
 }
