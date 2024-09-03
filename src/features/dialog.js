@@ -3,9 +3,6 @@ const showDialogBtn = document.querySelector('#showDialogBtn')
 const closeDialogBtn = document.querySelector('#closeDialogBtn')
 let isDialogOpen = false
 
-console.log(dialogContainer)
-console.log(showDialogBtn)
-
 showDialogBtn.addEventListener('click', (e) => {
   isDialogOpen = true
   e.preventDefault()
