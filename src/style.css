@@ -17,8 +17,10 @@ html {
 }
 
 .swiper {
-  width: 100dvw;
+  width: 100%;
   height: 100%;
+  padding-top: 88px !important;
+  padding-bottom: 88px !important;
 }
 
 .swiper-slide {
@@ -30,17 +32,4 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.swiper-pagination {
-  position: absolute;
-  left: 0;
-  bottom: 0;
 }
