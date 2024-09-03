@@ -2,16 +2,26 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Rafał Izdebski" />
-    <link rel="author" href="rafalizdebski.pl" />
     <meta name="creator" content="Rafał Izdebski" />
+    <meta
+      name="description"
+      content="Jesteśmy CarsSpot, zajmujemy się sprzedażą samochodów z Europy. Sprawdź naszą ofertę."
+    />
+    <meta name="robots" content="noindex, nofollow, nocache" />
+    <meta
+      name="googlebot"
+      content="noindex, nofollow, noimageindex, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+    />
+    <link rel="canonical" href="https://carsspot.netlify.app/" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <title>CarsSpot | Sprzedajemy samochody z Europy</title>
     <link rel="stylesheet" href="/src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Magra:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -19,21 +29,6 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <title>CarsSpot | Sprzedajemy samochody z Europy</title>
-    <meta
-      name="description"
-      content="Jesteśmy CarsSpot, zajmujemy się sprzedażą samochodów z Europy. Sprawdź naszą ofertę."
-    />
-    <link rel="canonical" href="https://carsspot.netlify.app/" />
-
-    <!-- Robots Meta Tags-->
-    <meta name="robots" content="noindex, nofollow, nocache" />
-    <meta
-      name="googlebot"
-      content="noindex, nofollow, noimageindex, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
-    />
-
-    <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://carsspot.netlify.app/" />
     <meta property="og:type" content="website" />
     <meta
@@ -48,8 +43,6 @@
       property="og:image"
       content="https://opengraph.b-cdn.net/production/images/532f3ed6-67fb-41ce-b504-f77ce99f7aca.jpg?token=lk-pOE1XfKbR1zMR3q5nnKvp6F48oWH3BJkuO6dC4WE&height=630&width=1200&expires=33261300488"
     />
-
-    <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://carsspot.netlify.app/" />
     <meta
@@ -64,13 +57,24 @@
       name="twitter:image"
       content="https://opengraph.b-cdn.net/production/images/532f3ed6-67fb-41ce-b504-f77ce99f7aca.jpg?token=lk-pOE1XfKbR1zMR3q5nnKvp6F48oWH3BJkuO6dC4WE&height=630&width=1200&expires=33261300488"
     />
+    <link rel="author" href="https://rafalizdebski.pl" />
   </head>
   <body class="overflow-x-hidden">
-    <div>
+    <div class="relative">
       <header class="relative w-dvw h-20">
         <div class="container flex items-center justify-between w-full h-full">
-          <a class="text-black" href="/"
-            ><span class="text-accent">Cars</span>Sport</a
+          <a class="flex gap-2 items-center justify-center text-black text-2xl font-magra font-bold" href="/"
+            >
+            <svg width="30" height="32" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.9883 13.4967L27.6 13.1258" stroke="#0147FF" stroke-width="4" stroke-linecap="round"/>
+              <path d="M27.6 13.3113L13.2941 30" stroke="#0147FF" stroke-width="4" stroke-linecap="round"/>
+              <path d="M13.2941 30L14.9882 18.8741" stroke="#0147FF" stroke-width="4" stroke-linecap="round"/>
+              <path d="M2.28238 18.8741H14.6118" stroke="#0147FF" stroke-width="4" stroke-linecap="round"/>
+              <path d="M16.2118 2L2 18.9669" stroke="#0147FF" stroke-width="4" stroke-linecap="round"/>
+              <path d="M16.1176 2L14.6118 13.4967" stroke="#0147FF" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+              
+            <p><span class="text-accent">Cars</span>Spot</p></a
           >
 
           <!--- MOBILE HAMBURGER --->
@@ -87,15 +91,25 @@
           <!--- MOBILE MENU --->
           <div
             id="mobileMenu"
-            class="absolute -bottom-[calc(100dvh-80px)] -right-[calc(100%+4rem)] flex items-end justify-end w-dvw h-dvh bg-black bg-opacity-10 backdrop-blur-xl transition-all duration-300"
+            class="absolute -bottom-[calc(100dvh-80px)] -right-[calc(100%+4rem)] flex items-end justify-end w-dvw h-dvh bg-black bg-opacity-10 backdrop-blur-xl transition-all duration-300 z-50"
           >
             <div
               class="relative flex flex-col items-end justify-between bg-white opacity-100 w-10/12 max-w-3xl h-full p-6"
             >
               <div class="flex items-center justify-between w-full">
-                <a class="text-black" href="/"
-                  ><span class="text-accent">Cars</span>Sport</a
-                >
+                <a class="flex gap-2 items-center justify-center text-black text-2xl font-magra font-bold" href="/"
+            >
+            <svg width="30" height="32" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.9883 13.4967L27.6 13.1258" stroke="#0147FF" stroke-width="4" stroke-linecap="round"/>
+              <path d="M27.6 13.3113L13.2941 30" stroke="#0147FF" stroke-width="4" stroke-linecap="round"/>
+              <path d="M13.2941 30L14.9882 18.8741" stroke="#0147FF" stroke-width="4" stroke-linecap="round"/>
+              <path d="M2.28238 18.8741H14.6118" stroke="#0147FF" stroke-width="4" stroke-linecap="round"/>
+              <path d="M16.2118 2L2 18.9669" stroke="#0147FF" stroke-width="4" stroke-linecap="round"/>
+              <path d="M16.1176 2L14.6118 13.4967" stroke="#0147FF" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+              
+            <p><span class="text-accent">Cars</span>Spot</p></a
+          >
                 <button
                   id="closeMenuBtn"
                   class="flex flex-col gap-1 w-10 h-8 items-center justify-evenly"
@@ -133,7 +147,7 @@
               </div>
               <a
                 class="rounded-lg px-6 py-3 mb-0 bg-accent hover:bg-accent/90 text-white font-robotoFlex font-semibold transition-colors"
-                href="callto:000000000"
+                href="tel:000000000"
                 >Zadzwoń do nas</a
               >
             </div>
@@ -160,7 +174,7 @@
           </nav>
           <a
             class="hidden lg:inline rounded-lg px-6 py-3 bg-accent hover:bg-accent/90 text-white font-robotoFlex font-semibold transition-colors"
-            href="callto:000000000"
+            href="tel:000000000"
             >Zadzwoń do nas</a
           >
         </div>
@@ -184,17 +198,17 @@
             <div class="flex flex-col sm:flex-row gap-6">
               <a
                 class="rounded-lg px-6 py-3 w-full sm:w-fit bg-accent hover:bg-accent/90 text-secondary font-robotoFlex font-semibold transition-colors"
-                href=""
+                href="#galeria"
                 data-aos="fade-right"
                 data-aos-delay="300"
                 >Zobacz zdjęcia</a
               >
               <a
                 class="rounded-lg px-6 py-3 w-full sm:w-fit bg-transparent hover:bg-accent/90 border border-accent text-accent hover:text-secondary font-robotoFlex font-semibold transition-colors"
-                href=""
+                href="tel:55000000"
                 data-aos="fade-left"
                 data-aos-delay="300"
-                >Zobacz zdjęcia</a
+                >Zadzwoń do nas</a
               >
             </div>
           </div>
@@ -203,92 +217,36 @@
           <div class="container">
             <div class="flex flex-col gap-6 lg:w-2/5">
               <div>
-                <h3 class="text-accent text-[1.34375rem] font-robotoCondensed">
+                <h3
+                  class="text-accent text-[1.34375rem] font-robotoCondensed"
+                  data-aos="fade-right"
+                  data-aos-delay="100"
+                >
                   Prezentacja firmy
                 </h3>
-                <h2 class="text-dark font-bebasNeue text-[2.5rem] uppercase">
+                <h2
+                  class="text-dark font-bebasNeue text-[2.5rem] uppercase pb-7"
+                  data-aos="fade-right"
+                  data-aos-delay="100"
+                >
                   Zobacz naszą galerię zdjęć
                 </h2>
               </div>
-              <div class="space-x-12">
-                <a class="font-robotoFlex font-semibold text-accent" href="/"
-                  >Samochody osobowe</a
-                >
-                <a class="font-robotoFlex font-normal text-black" href="/"
-                  >Samochody osobowe</a
-                >
-              </div>
             </div>
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img
-                    src="https://images.unsplash.com/photo-1434907652076-85f8401482c3?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    loading="lazy"
-                    alt=""
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="https://images.unsplash.com/photo-1434907652076-85f8401482c3?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    loading="lazy"
-                    alt=""
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="https://images.unsplash.com/photo-1434907652076-85f8401482c3?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    loading="lazy"
-                    alt=""
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="https://images.unsplash.com/photo-1434907652076-85f8401482c3?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    loading="lazy"
-                    alt=""
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="https://images.unsplash.com/photo-1434907652076-85f8401482c3?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    loading="lazy"
-                    alt=""
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="https://images.unsplash.com/photo-1434907652076-85f8401482c3?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    loading="lazy"
-                    alt=""
-                  />
-                </div>
-
-                <div class="swiper-slide">
-                  <img
-                    src="https://images.unsplash.com/photo-1434907652076-85f8401482c3?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    loading="lazy"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
+            <div id="swiper-container" ></div>
         </section>
         <section class="bg-primary w-dvw h-full">
           <div
-            class="container grid grid-cols-1 lg:grid-cols-2 lg:gap-12 content-between py-[88px]"
+            class="container grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-12 content-between py-[88px]"
           >
-            <article class="space-y-4">
+            <article class="article space-y-4">
               <h5 class="font-bebasNeue text-2xl text-white">
                 ID NOSTRUD ENIM ESSE CONSECTETUR IN EU MOLLIT FUGIAT AUTE. VELIT
                 NULLA COMMODO.
               </h5>
               <div class="space-y-6">
                 <p
-                  id="textContent"
-                  class="font-robotoCondensed text-sm text-white h-1/2"
+                  class="textContent font-robotoCondensed text-sm text-white h-1/2"
                 >
                   Mauris varius ipsum mauris, rutrum lobortis magna efficitur a,
                   Donec egestas, nisl vegicula feugiat ornare, diam turpis
@@ -304,13 +262,10 @@
                   efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et
                 </p>
                 <button
-                  id="toggleButton"
-                  class="flex items-center gap-[6px] text-white border-b-[1.5px] pb-2 font-robotoCondensed border-white"
+                  class="toggleContent flex items-center gap-[6px] text-white border-b-[1.5px] pb-2 font-robotoCondensed border-white"
                 >
                   <span>Rozwiń</span>
                   <svg
-                    id="arrowIcon"
-                    class="transition-transform duration-300"
                     width="13"
                     height="15"
                     viewBox="0 0 13 15"
@@ -325,15 +280,14 @@
                 </button>
               </div>
             </article>
-            <article class="space-y-4">
+            <article class="article space-y-4">
               <h5 class="font-bebasNeue text-2xl text-white">
                 ID NOSTRUD ENIM ESSE CONSECTETUR IN EU MOLLIT FUGIAT AUTE. VELIT
                 NULLA COMMODO.
               </h5>
               <div class="space-y-6">
                 <p
-                  id="textContent"
-                  class="font-robotoCondensed text-sm text-white h-1/2"
+                  class="textContent font-robotoCondensed text-sm text-white h-1/2"
                 >
                   Mauris varius ipsum mauris, rutrum lobortis magna efficitur a,
                   Donec egestas, nisl vegicula feugiat ornare, diam turpis
@@ -349,13 +303,10 @@
                   efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et
                 </p>
                 <button
-                  id="toggleButton"
-                  class="flex items-center gap-[6px] text-white border-b-[1.5px] pb-2 font-robotoCondensed border-white"
+                  class="toggleContent flex items-center gap-[6px] text-white border-b-[1.5px] pb-2 font-robotoCondensed border-white"
                 >
                   <span>Rozwiń</span>
                   <svg
-                    id="arrowIcon"
-                    class="transition-transform duration-300"
                     width="13"
                     height="15"
                     viewBox="0 0 13 15"
@@ -372,15 +323,189 @@
             </article>
           </div>
         </section>
+        <div id="dialog" class="fixed  place-items-center top-0 w-dvw h-dvh backdrop-blur-sm bg-white/10 z-50 hidden">
+          <div class="relative container bg-blue-50 w-dvw lg:w-[50dvw] h-[80dvh] flex flex-col aspect-square px-12 py-20 rounded-xl">
+
+
+            <button
+                  id="closeDialogBtn"
+                  class="absolute top-2 flex flex-col gap-1 w-10 h-8 items-center justify-evenly self-end"
+                  aria-label="Zamknij menu nawigacyjne"
+                >
+                  <span
+                    class="w-full h-1 bg-accent rounded-lg rotate-45 origin-center translate-y-2"
+                  ></span>
+                  <span
+                    class="w-full h-1 bg-accent rounded-lg -rotate-45 origin-center -translate-y-[7px]"
+                  ></span>
+            </button>
+            <div class="overflow-y-scroll overflow-x-hidden">
+              <p class="text-center">Przykładowa polityka prywatności CarsSpot</p>
+              <ul className='space-y-4'>
+                <li className='space-y-2'>
+                  <h5>1. Informacje Ogólne</h5>
+                  <p>
+                    Niniejsza Polityka Prywatności opisuje zasady przetwarzania i
+                    ochrony danych osobowych przekazywanych przez użytkowników w
+                    związku z korzystaniem z usług CarsSpot,
+                    dostępnego pod adresem https://carsspot.netlify.app/. Dokładamy
+                    wszelkich starań, aby Twoje dane były przetwarzane zgodnie z
+                    obowiązującymi przepisami prawa, w szczególności z
+                    Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679
+                    (RODO).
+                  </p>
+                </li>
+  
+                <li className='space-y-2'>
+                  <h5>2. Administrator Danych</h5>
+                  <p>
+                    Administratorem Twoich danych osobowych jest https://carsspot.netlify.app/, 04-485 Warszawa, NIP: 000-000-00-00. W razie
+                    jakichkolwiek pytań dotyczących przetwarzania danych
+                    osobowych, możesz skontaktować się z nami pod adresem e-mail:{' '}
+                    <a href='mailto:przyklad@gmail.com'>przyklad@gmail.com</a>
+                    .
+                  </p>
+                </li>
+  
+                <li className='space-y-2'>
+                  <h5>3. Cele i Podstawy Prawne Przetwarzania Danych</h5>
+                  <p>Twoje dane osobowe przetwarzamy w celu:</p>
+                  <ol className='space-y-1'>
+                    <li>
+                      <p>
+                        <b>Odpowiedzi na zapytania</b> – przetwarzanie danych w
+                        celu odpowiedzi na zapytania wysyłane przez formularz
+                        kontaktowy lub e-mail (art. 6 ust. 1 lit. b RODO).
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+  
+                <li className='space-y-2'>
+                  <h5>4. Rodzaje Gromadzonych Danych</h5>
+                  <p>
+                    W ramach naszej działalności możemy zbierać następujące dane
+                    osobowe:
+                  </p>
+                  <ol className='space-y-1'>
+                    <li>
+                      <p>Przykładowe dane.</p>
+                    </li>
+                    <li>
+                      <p>Przykładowe dane.</p>
+                    </li>
+                  </ol>
+                </li>
+  
+                <li className='space-y-2'>
+                  <h5>5. Przekazywanie Danych</h5>
+                  <p>Twoje dane mogą być przekazywane:</p>
+                  <ol className='space-y-1'>
+                    <li>
+                      <p>
+                        Podmiotom przetwarzającym dane na nasze zlecenie, np.
+                        firmom świadczącym usługi IT, księgowe, marketingowe.
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        Organom publicznym, jeśli zobowiązują nas do tego przepisy
+                        prawa.
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+  
+                <li className='space-y-2'>
+                  <h5>6. Okres Przechowywania Danych</h5>
+                  <p>
+                    Dane osobowe będą przechowywane przez okres niezbędny do
+                    realizacji celów, dla których zostały zebrane:
+                  </p>
+                  <ol className='space-y-1'>
+                    <li>
+                      <p>
+                        Dane przetwarzane na podstawie zgody – do momentu
+                        wycofania zgody.
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+  
+                <li className='space-y-2'>
+                  <h5>7. Prawa Osób, Których Dane Dotyczą</h5>
+                  <p>Masz prawo do:</p>
+                  <ol className='space-y-1'>
+                    <li>
+                      <p>Dostępu do swoich danych oraz otrzymania ich kopii.</p>
+                    </li>
+                    <li>
+                      <p>Sprostowania swoich danych.</p>
+                    </li>
+                    <li>
+                      <p>Usunięcia swoich danych (prawo do bycia zapomnianym).</p>
+                    </li>
+                    <li>
+                      <p>Ograniczenia przetwarzania danych.</p>
+                    </li>
+                    <li>
+                      <p>Przenoszenia danych.</p>
+                    </li>
+                    <li>
+                      <p>Wniesienia sprzeciwu wobec przetwarzania danych.</p>
+                    </li>
+                    <li>
+                      <p>
+                        Cofnięcia zgody na przetwarzanie danych w dowolnym
+                        momencie.
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+  
+                <li className='space-y-2'>
+                  <h5>8. Pliki Cookies</h5>
+                  <p>
+                    Nasza strona internetowa wykorzystuje pliki cookies w celu
+                    zapewnienia jak najlepszego funkcjonowania strony. Pliki
+                    cookies mogą być również używane w celach statystycznych oraz
+                    marketingowych. Użytkownik może zarządzać plikami cookies za
+                    pomocą ustawień swojej przeglądarki internetowej.
+                  </p>
+                </li>
+  
+                <li className='space-y-2'>
+                  <h5>9. Bezpieczeństwo Danych</h5>
+                  <p>
+                    Stosujemy odpowiednie środki techniczne i organizacyjne w celu
+                    ochrony Twoich danych osobowych przed nieuprawnionym dostępem,
+                    utratą, zniszczeniem lub zmianą.
+                  </p>
+                </li>
+  
+                <li className='space-y-2'>
+                  <h5>10. Zmiany w Polityce Prywatności</h5>
+                  <p>
+                    Zastrzegamy sobie prawo do wprowadzania zmian w niniejszej
+                    Polityce Prywatności. Wszelkie zmiany będą publikowane na
+                    naszej stronie internetowej.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </main>
+
       <footer class="bg-primary w-dvw h-20 border-t-[1px] border-white">
         <div class="container flex items-center justify-between h-full">
           <span class="font-robotoCondensed text-white font-bold"
             >Cars Spot</span
           >
           <a
+          id="showDialogBtn"
             class="font-robotoCondensed text-white underline underline-offset-1"
-            href="/"
+            href="#"
             >Polityka prywatności</a
           >
         </div>
@@ -390,37 +515,11 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init()
-    </script>
-
-    <script>
-      var swiper = new Swiper('.mySwiper', {
-        slidesPerView: 2,
-        loop: true,
-        centeredSlides: false,
-        spaceBetween: 48,
-        grabCursor: true,
-        slidesPerGroup: 1,
-        loopFillGroupWithBlank: false,
-        loopAdditionalSlides: 2,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-          type: 'bullets',
-        },
-        lazy: {
-          loadPrevNext: true,
-          loadPrevNextAmount: 2,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next-unique',
-          prevEl: '.swiper-button-prev-unique',
-        },
-        keyboard: {
-          enabled: true,
-          onlyInViewport: false,
-        },
+      AOS.init({
+        once: true,
+        disable: 'phone',
       })
     </script>
+
   </body>
 </html>
