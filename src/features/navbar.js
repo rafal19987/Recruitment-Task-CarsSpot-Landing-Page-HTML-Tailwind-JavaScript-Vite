@@ -1,26 +1,38 @@
 const hamburgerBtn = document.querySelector('#hamburger')
 const closeMenuBtn = document.querySelector('#closeMenuBtn')
 const mobileMenu = document.querySelector('#mobileMenu')
-let isMobileMenuOpen = false
+const menuLinks = mobileMenu.querySelectorAll('a')
 
-hamburgerBtn.addEventListener('click', () => {
-  isMobileMenuOpen = !isMobileMenuOpen
+function toggleMobileMenu(isOpen) {
+  mobileMenu.classList.toggle('open', isOpen)
+  document.body.style.overflow = isOpen ? 'hidden' : ''
+}
 
-  if (isMobileMenuOpen) {
-    mobileMenu.classList.add('open')
-    document.body.style.overflow = 'hidden'
-  } else {
-    mobileMenu.classList.remove('open')
-    document.body.style.overflow = ''
-  }
+function closeMobileMenu() {
+  toggleMobileMenu(false)
+}
+
+function handleMenuToggle() {
+  const isCurrentlyOpen = mobileMenu.classList.contains('open')
+  toggleMobileMenu(!isCurrentlyOpen)
+}
+
+hamburgerBtn.addEventListener('click', handleMenuToggle)
+closeMenuBtn.addEventListener('click', closeMobileMenu)
+
+menuLinks.forEach((link) => {
+  link.addEventListener('click', closeMobileMenu)
 })
 
-closeMenuBtn.addEventListener('click', () => {
-  isMobileMenuOpen = !isMobileMenuOpen
+document.addEventListener('click', (event) => {
+  const isClickInsideMenu = mobileMenu.contains(event.target)
+  const isClickOnHamburger = hamburgerBtn.contains(event.target)
 
-  if (isMobileMenuOpen) {
-    mobileMenu.classList.add('open')
-  } else {
-    mobileMenu.classList.remove('open')
+  if (
+    !isClickInsideMenu &&
+    !isClickOnHamburger &&
+    mobileMenu.classList.contains('open')
+  ) {
+    closeMobileMenu()
   }
 })

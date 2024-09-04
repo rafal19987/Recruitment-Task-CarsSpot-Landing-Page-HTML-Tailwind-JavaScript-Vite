@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const tabsButtons = TABS.map(
       (tab) =>
         `<a
-          class="inline-block font-robotoFlex font-semibold ${
+          class="inline-block font-robotoFlex tracking-tight leading-[150%] underline-offset-[30px] text-[15px] ${
             tab.isActive
-              ? 'text-accent underline underline-offset-4'
-              : 'text-black'
+              ? 'text-accent underline  font-semibold'
+              : 'text-black font-normal'
           }"
           href="#"
           data-id="${tab.id}"
@@ -62,10 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="swiper-wrapper">
           ${photosMarkup}
         </div>
-        <div class="grid grid-cols-2">
-          <div> </div>
-          <div class="swiper-pagination"></div>
-        </div>
       </div>
     `
 
@@ -75,7 +71,6 @@ document.addEventListener('DOMContentLoaded', function () {
       slidesPerView: 1,
       spaceBetween: 24,
       centeredSlides: false,
-
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -87,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
       breakpoints: {
         1024: {
           slidesPerView: 2,
-          spaceBetween: 48,
+          spaceBetween: 64,
           grabCursor: true,
         },
       },
