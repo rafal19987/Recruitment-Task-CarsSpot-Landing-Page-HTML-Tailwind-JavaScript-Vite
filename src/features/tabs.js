@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="swiper-wrapper">
           ${photosMarkup}
         </div>
-          <div class="swiper-pagination"></div>
       </div>
     `
 
@@ -72,7 +71,6 @@ document.addEventListener('DOMContentLoaded', function () {
       slidesPerView: 1,
       spaceBetween: 24,
       centeredSlides: false,
-
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
