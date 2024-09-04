@@ -42,6 +42,7 @@ Landing page stworzony w HTML, CSS, Tailwind, JavaScript jako część zadania r
 - [x] Dialog Alert z polityką prywatności
 
 ## Bugi:
+
 - [ ] Właściwość gap-12 nie działa dla kontenera zawierającego przyciski do nawigacji pomiedzy sliderami
 
 <br />
@@ -60,6 +61,8 @@ Landing page stworzony w HTML, CSS, Tailwind, JavaScript jako część zadania r
 
 ![public/screenshots/screenshot-3](./public/screenshots/screenshot-7.png)
 ![public/screenshots/screenshot-8](./public/screenshots/screenshot-8.png)
+
+![public/screenshots/screenshot-opengraph-discord](./public/screenshots/screenshot-opengraph-discord.png)
 
 <br />
 
