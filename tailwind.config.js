@@ -11,7 +11,7 @@ export default {
         lg: '0rem',
       },
       screens: {
-        '2xl': '1200px',
+        lg: '1200px',
       },
     },
     extend: {
