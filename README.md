@@ -40,12 +40,26 @@ Landing page stworzony w HTML, CSS, Tailwind, JavaScript jako część zadania r
 - [x] Karuzela zdjęć z wykorzystaniem biblioteki Swiper
 - [x] Rozwijalne artykuły w dolnej sekcji strony kiedy tekst jest zbyt długi
 - [x] Dialog Alert z polityką prywatności
-- [ ] Placeholder podczas wczytywania zdjęć w sliderze
-- [ ] Stworzenie Prose z Tailwind do zarządzania typografią
+
+## Bugi:
+- [ ] Właściwość gap-12 nie działa dla kontenera zawierającego przyciski do nawigacji pomiedzy sliderami
 
 <br />
 
 ## ScreenShots:
+
+![public/screenshots/screenshot-1](./public/screenshots/screenshot-1.png)
+
+![public/screenshots/screenshot-2](./public/screenshots/screenshot-2.png)
+
+![public/screenshots/screenshot-7](./public/screenshots/screenshot-6.png)
+
+![public/screenshots/screenshot-5](./public/screenshots/screenshot-4.png)
+
+![public/screenshots/screenshot-6](./public/screenshots/screenshot-5.png)
+
+![public/screenshots/screenshot-3](./public/screenshots/screenshot-7.png)
+![public/screenshots/screenshot-8](./public/screenshots/screenshot-8.png)
 
 <br />
 
