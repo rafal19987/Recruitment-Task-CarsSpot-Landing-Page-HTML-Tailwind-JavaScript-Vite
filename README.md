@@ -1,10 +1,10 @@
-# Zadanie rekrutacyjne Landing Page CarsSpot
+# Zadanie rekrutacyjne Landing Page
 
 #### Sprawdź wersję Demo [tutaj](https://carsspot.netlify.app/)
 
 ## Opis:
 
-Landing page stworzony w HTML, CSS, Tailwind, JavaScript jako część zadania rekrutacyjnego, którego celem było wdrożenie statycznej strony na podstawie mockupu przygotowanego w Figmie. Od siebie dodałem kilka animacji w AOS oraz wykorzystałem bibliotekę Swiper do stworzenia caruzeli zdjęć.
+Landing page stworzony w HTML, CSS, Tailwind, JavaScript jako część zadania rekrutacyjnego, którego celem było wdrożenie statycznej strony na podstawie mockupu przygotowanego w Figmie. Od siebie dodałem kilka animacji w AOS oraz wykorzystałem bibliotekę Swiper do stworzenia karuzeli zdjęć.
 
 <br />
 
